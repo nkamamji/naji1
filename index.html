@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <input type="text" id="x1" placeholder="Enter Score1"><br><br>
+
+    <input type="text" id="x2" placeholder="Enter Score2">
+     <input type="submit" id="hh">
+    
+
+
+    <script>
+       document.getElementById('hh').onclick=function(){
+         val1=document.getElementById('x1').value;
+         val2=document.getElementById('x2').value;
+         if (val1==='' || val2==='' ) 
+              document.getElementById('res').innerText='score 1 is empty';
+         else if (val1<0 || val2<0)
+            document.getElementById('res').innerText='score 1 negative';
+            else if (isNaN(val1) || isNaN(val2) || val1.trim()=='' || val2.trim()=='' )
+            document.getElementById('res').innerText='it is not digit';
+
+        else {
+              res=parseFloat(val1)+parseFloat(val2);
+           document.getElementById('res').innerText=`the rsult = ${res}`;
+            }
+       
+       }
+     
+       
+    </script>
+         <p id="res">result</p>
+</body>
+</html>

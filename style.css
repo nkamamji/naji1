@@ -1,0 +1,9 @@
+a{
+    width:10px;
+    height:10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: brown;
+    cursor: pointer;
+
+}
